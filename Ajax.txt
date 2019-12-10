@@ -1,0 +1,180 @@
+Ajax
+1.request:请求
+2.response：响应
+3.不能重复启动服务器（node add.js）
+4.ctrl+c;关闭服务器
+5.打开终端面板 ctrl+~
+服务器文件
+   1.必须放到 ajax/public 里
+访问自己的服务器
+1.IP
+2.127.0.0.1：端口号（本地回环地址）
+3.域名 localhost:端口号
+
+Ajax 是一门实现客户端和服务器交互的技术
+
+xhr  表示ajax请求
+1. 写一段jQ代码，实现Ajax技术   
+        $.ajax({
+            // 属性：值
+            type：‘GET’【get post】
+            url:'http://localhost:4000/Ajax.html',
+            url:'/comment/abc',【他不是真实 的文件，而是接口】
+            data：参数 【1：参数=值&参数=值 2：{参数：值，参数：zhi}】
+            dataType：‘json’【默认值为text xml】
+            success:function(result){
+                console.log(result);  【返会的结果】              
+            }
+            beforeSend:function(){
+                NProgress.start();
+            },
+            complete:function(){
+                NProgress.done();
+            }
+        });
+接口介绍：
+是一个网址
+2.发送ajax请求的时候，可以为url添接口地址
+3.方便获取数据的一个网址
+
+1.type：‘get’|‘post’
+     get：请求一般获取服务器上的资源--不会改变数据
+     post：请求一般用于提交数据给服务器--可能改变数据
+2.dataType：‘json’|‘text’|‘xml’
+3.beforeSend：在发送ajax前，允许做的事情
+4.complete：在发送ajax后，允许做的事情，不管成功或失败
+
+
+2.原声js的Ajax请求
+2.1GET方式
+     // 1.实例化对象  XMLHttpRequest 对象
+    // 2.调用open方法， 设置请求的方式的url【设置参数】
+    // 3.调用send方法，发送请求----->到这一步，才是真的发送ajax请求
+    // 4.当请求响应过程结束，然后接收服务器响应的结果
+   var xhr = new XMLHttpRequest();
+    xhr.open('GET','/common/checkUser?username=lisi&age=22');
+    xhr.send();
+    xhr.onload = function(){
+        // xhr.responseText接受文本类型的结果
+        console.log(this.response); //接受任意结果       
+    } 
+
+2.2POST方式
+    // 1.创建xhr对象
+    // 2.调用open方法，这是请求方式和url
+    // 3.设置一个请求头，固定的一行代码
+    // 4.多用send，发送请求【设置参数】
+    // 5.设置onload事件，接受服务器响应的结果
+    var xhr = new XMLHttpRequest();
+    xhr.open('post','/message/addMsg');
+    xhr.responseType:'json';
+    xhr.setRequestHeader('Content_Type','application/x-www-form-urlencoded');
+    xhr.send('name=xxx$content=xxxxx');
+    xhr.onload = function(){
+        console.log(xhr.response);        
+    }
+
+3. readyState 和onreadyStatechange
+     onreadyStatechange  ： 
+     readyState：有0,1,2,3,4五个状态 
+     readyState：的状态没有变化，但接收到的数据发生变化时，也会触发
+
+4. 浏览器分块接收数据chunk
+       readyState：的状态没有变化，但接收到的数据发生变化时，也会触发onreadyStatechange
+5. IE缓存cache
+原因：由于多次ajax  get请求，url完全一致
+解决：让每次请求的url不一致(例如加时间戳)
+
+6. 创建xhr对象的兼容写法
+    var xhr = new XMLHttpRequest()
+    var xhr = new ActiveXObject('Microsoft.XMLHTTP');  //IE6 IE7的写法
+
+7. responseType属性
+     相当于dataType
+     把json转换成数组
+
+8. 异步操作
+     耗时操作，不会影响后续代码，就是不会阻塞后续代码的执行
+    open（）第三个参数默认为true异步请求
+9. 同步操作
+     同一时间点，只能执行一个操作，前面代码会阻塞后面代码的执行
+     open（）第三个参数为false为同步请求
+
+10. 封装
+     把需要变化的位置，设置为形参
+     处理异步请求的结果，必须使用回调函数
+
+11. FormData
+ 获取文件域的方式 (通过DOM对象找文件对象)
+   file.files[0] 【获取元素.files[下标]】
+创建临时url ： URL.creatObjectURL(文件对象)
+设置预览图片的src属性
+     1. 有form表单时
+         // 1.获取用户输入的值
+           // FormData：找表单，找表单dom对象
+          var form = document.querySelector('#form');
+          // 实例化formdata，并传递表单
+          var foremdata = new ForemData(form);
+
+         // 2.发送ajax请求
+	var xhr = new XMLHttpRequest();
+       	xhr.open('post','/common/fd');
+        	xhr.send(formdata);
+        	xhr.onload = function () {
+            	     // 接收到的数据，应该是发送到服务的数据
+            	     console.log(this.response); }
+      2. 请求头的设置
+          如果提交的数据是纯文本，没有文件上传，需要设置请求头
+          是有FormData的时候，不需要设置请求头
+
+       3. 不能让表单提交
+            .  提交方式为button ----
+            .  提交方式为submit---- js代码中要阻止默认行为
+       4. 表单中必须有name属性，因为FormData收集表单数据是根据name
+       5. 文本域标签属性 multiple  accept
+	 multiple： 允许上传多文件
+	accept：接收的类型  ‘.jpg .png .gif’'image/* '
+
+        6. 有form标签 ：点击-获取form表单--实例化FormData，（），传入form --- 请求---post--xhr.send（formData）
+            没有form标签  ： 点击---实例化FormData()---追加formdata.append() --- 请求---post--xhr.send（formData）
+
+        7. contentType：false ；表示不设置请求头中的 content-Type
+	processData：false；不需要将formdata转成字符串
+
+        8. 懒加载
+               
+
+12. 模板引擎
+
+13. 综合案例
+
+
+获取地址栏参数  ：location.search  //获取href的id地址 (字符串)截取
+替换  .replace('查找的字符',' ');  /\D/g 
+\d  :表示数字
+\D : 表示非数字
+/ /  : 正则表达式
+g ： 表示全局匹配
+
+模板引擎
+   数据必须是js对象{ }格式
+   tenplate库
+
+模板标签
+   <script type='text/html' id='test'><li>{{ name }}</li></script>
+   <script> var data = { };  template('模板id test'，'数据data')</script>
+
+seccess:function(res){}
+error:function(res){res.statusText=='Forbidden'}
+
+全局ajax设置【在jquery源代码底部增加$.ajaxSetup({})】
+$.ajaxSetup({
+    headers：{ Authoriztion:localStorage.getItem('token')}
+    error:function( res ){ }
+})
+
+
+
+
+
+

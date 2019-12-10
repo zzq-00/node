@@ -1,0 +1,58 @@
+八.动画机制
+	stop():可以控制青空动画的排队机制，一定要写在动画移入移出前面。
+九.jQuery的常用方法
+	1.hover方法：鼠标移入和移出的综合体
+	$('div').hover(function(){
+        //鼠标移入
+        $(this).children().stop().slideDown();
+        },function(){
+        //鼠标移出
+        $(this).children().stop().slideUp();
+    })
+ 	2.index索引值
+ 		在jQuery中选出的的元素都有一个index(),可以返回这个元素的索引值。
+ 	3.jQuery中的链式编程
+ 		在jQuery中针对同一目标进行的所有操作都可以通过语法连续书写，叫做链式编程
+十、jQuery控制class
+	1.添加类：addClass('想要加的类名')
+	2.取消类：removeClass('想要取消的类名')
+	3.判断是否有类：hasClass('要判断的类名')
+	4.类的切换：toggleClass('想要切换的类)
+十一、节点控制
+	对html文档的标签结构进行控制--对标签进行一个增删改查
+	1.添加节点：
+		append():将指定节点追加到容器的子级最后位置
+		prepend():将指定节点追加到容器的子级最前面
+		before():将指定节点追加到容器的同级之前
+		after():将指定节点追加到容器的同级之后
+	2.删除节点：
+		remove():删除节点
+		empty():清空节点(保留盒子)
+	3.val():获取元素的value值
+	4.移动节点：同级节点
+		insertBefore() 在...之前插入
+		insertAfter()  在...之后插入
+	5.替换节点
+		replaceWith()  把...替换为...
+十二、fade动画(括号里可以加时间，'slow','fast','normal')
+    1.fadeOut()  渐变的消失
+    2.fadeIn()   渐变的显示
+    3.fadeToggle() 渐变切换
+    4.fadeTo() 变透明度 (变化时间，透明值"0-1") 
+    	css: opacity:0.5  filter:alphal(opacity=50)  agba(0,0,0,0.5)
+十三、私有空间、私有变量
+	在js中一对大括号表示一个封闭空间，也表示一个局部空间，也叫私有空间，'私有变量'在'私有空间'外部不能访问
+十四、自定义动画
+	1.animate({'属性名'：'属性值','属性名'：'属性值',...},动画时间)
+	2.delay(时间) 延迟时间
+十五.each遍历函数
+		代替for循环
+		$('.all ul li p').each(function(index,element){
+                    
+                })
+		参数：index 代表当前循环的序号
+		      element 代表当前循环的元素
+十六、事件坐标
+	1.在匿名函数中写一个小e，这个e事件本身
+		e.pageX 横坐标
+		e.pageY 纵坐标

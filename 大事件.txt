@@ -1,0 +1,56 @@
+大事件
+   一，后台接口配置
+           1. 安装软件node.js
+                a. 查看是否安装 打开git bush 输入 node -v
+           2. 安装数据库-建立数据库--在配置接口位置--右击打开git bush--输入node reset
+
+           3. j接口运行
+	打开‘开始.bat’
+           4. 接口地址 
+	基地址 ：开发环境地址 | 生产环境地址
+                接口地址 ：
+	注意：开启的bat 黑窗不能关，如果数据没有返回，在运行界面敲回车
+           5. Postman软件--模拟请求接口测试地址
+           6. git里初始化数据
+
+
+二，iframe使用
+a标签的target 可以设置为iframe的name属性
+点击a标签就回吧新的页面展示到iframe内部
+    <a href="./a.html" target="myframe"></a>
+    <a href="./b.html" target="myframe"></a><br>
+    <iframe name="myframe" src="./a.html" frameborder="0"></iframe>
+
+接口
+parman使用测试接口
+登录页login -- post方式--body-- x-www-content -- 
+接受用户信息页info--get方式--接受Authorization--
+
+
+ajax请求时
+请求成功 success:function(){}
+请求错误 error:function(){}
+          
+
+1.自动刷新插件
+  安装liverserver
+  右键通过liver server 自动刷新
+
+2. typora自动编号
+  文件/偏好设置/主题文件夹/ ---把bass.css赋值文件里
+           
+           
+              
+          
+            
+               
+          
+            
+               
+             
+           
+                
+
+
+
+  

@@ -1,0 +1,545 @@
+下拉标签select--option
+select.value:代表获取option里的内容（option若设置value='0',则获取的是0下标）
+
+函数若有返回值，则需要接受
+
+隐式转换false的 ----0  ' ' null undefined NaN 
+基础
+变量 var a;
+数据类型 Number()  Strig();  boolean();  null() undefined();  parseFloat()  parseInt();
+转 数组：split(指定分隔符)   转字符串：join（指定分隔符）
+操作符 运算符
+优先级 [] {} ++  --   !   算术运算符    比较运算符  赋值运算法   逻辑运算符   =   +=  -=
+
+
+流程控制
+分支结构  if(){}else if(){}else{}  （只走一次）
+循环结构
+while(条件表达式) { 循环体}    
+  1.先执行条件表达式  2.表达式为true,执行循环体   3.表达式为false,循环结束
+for(初始表达式 ; 条件表达式  ; 自增表达式){ 循环体}
+  1.先执行初始表达式  2.条件表达式   为假 --退出循环  为真-- 执行循环体 -------执行自增表达式
+do{循环体} while(表达式)
+   1,先执行循环体  2,在判断表达式
+break   表示 退出上一层for循环,
+continue 表示跳过次循环
+return  表示结束函数（还有返回的意思）
+
+特点:
+while 循环 若条件表达式一直为true 则会无限循环   
+for  
+do 会先执行一次循环体
+
+
+数组
+arr = [ ];
+遍历 for  forEach (function(){})
+隐藏对象 argument : 返回伪数组
+
+
+
+函数
+function  函数名(参数){}
+
+对象
+obj = { 属性名：属性值}
+访问属性方法
+第一种 ：obj.属性名
+第二种 ：obj['属性名']
+
+
+内置对象
+Math.
+Date()
+Array()
+String()
+
+系统默认new出来的
+所有的定义的数组都是Array的实例对象
+var arr=[1,2,3] ===> new Array()
+var arr1=[1,2,3] ===> new Array()
+所有的函数都是Function的实例对象
+var fn = new Function()
+function fn () {}
+字符串
+数组
+对象
+
+字符串
+1.不可变  var a ="abc";  a =a + "123456";
+ 字符串 拼接 或 重新赋值  ,之前的字符串不是被覆盖,而是在内存中处于游离状态[占内存空间]
+ 所以要避免在原字符串之间的拼接,利于性能优化
+
+2. 返回新字符串,对原字符串没有影响
+   2.1  str.concat()  拼接字符串  数组
+   2.2  str. substring()  截取通过下标    substring(开始下标包括 , 结束下标 不包括)
+   2.3  str. substr() 截取通过下标  substr( 开始下标 , 截取个数)
+   2.4  str. slice()  截取通过下标 与substring()同理, 
+	 slice 可以为负值,把负值和长度进行相加
+   2.5  字符串 转数组   str.split("指定分隔符")
+
+3. 查找字符
+    3.1   str . indexOf("我们") 通过字符(每一项)  返回下标
+    3.2   charAt(0)   通过下标(每一项)   返回字符
+
+
+
+字符串 与 数组 互转 
+    1. 字符串 转 数组  
+	var arr = str . split("指定分隔的符号");
+ 	场景 :  地址解析  将字符串  转成 对象
+    2. 数组 转 字符串   
+	var str = arr.join("指定分隔符");
+
+
+
+数组 
+ arr = [ ]
+1.数组也是个对象类型
+
+2. 返回新字符串,对原字符串没有影响
+   2.1  arr . concat()  拼接字符串  数组
+   2.2  arr . slice()  截取通过下标    slice( 开始下标(包括)  ,  结束下标(不包括) );
+
+3.原元素数组上修改
+    3.1  arr . splice()    arr.splice(开始的下标 , 要移除的个数 , 添加的元素  , )
+	返回被删的元素 arr.splice(2 , 2 , "abc" , 7 , 8) 
+    3.2  arr . push(1,2,"abc" )   从数组后面添加一个或多个元素 ,返回数组长度
+    3.3  arr . unshift( 0,1,2)  从数组前面添加一个或多个元素 ,返回数组长度
+    3.4  arr . pop()  从后面删除一个元素  返回被删除的元素
+    3.5  arr . shift()  从前面删除一个元素  返回被删除的元素
+
+4.查找元素
+    4.1  arr . indexOf('元素')  查找元素  返回下标 ，没有返回-1
+    4.2  arr . findIndex( function( item ){ return item>10; } )  查找数组中满足条件元素的索引值
+    4.3  arr . filter( function( item , index ){ return item>10; } )  过滤数组中满足条件的元素
+5. 数组的遍历
+  5.1  for( var i=0;i<arr.length; i++) { } 通过下标,得到数组项
+  5.2  元素.forEach( function( item , index ,arr){ sum += item; } )  
+   6.2  过滤数组 arr.some(函数)  - 满足条件 返回 return  item==true; 只要找到为true的就结束
+   6.2  过滤数组 arr.every(函数)  - 满足条件 返回 return   item==true; 所有的都满足才返回true，否则返回false
+    6.3 查找单个元素 返回元素本身停止  arr.find(函数)
+    6.4 用于简单数组  includes  查找数值--返回布尔值
+
+6. 数组的复制
+   声明一个数组－声明一个新的空数组
+   6.1  遍历数组 forEach－推进 - 将 new_arr.push( item );
+   6.2  过滤数组 arr.filter()  - 满足条件 返回 return  arr.indexOf( item ) != -1;
+   6.3  拼接数组  var new_arr = arr.concat(); 不传入参数,返回所有数
+   6.4  截取数组 var new_arr = arr.slice(); 不传入参数 表截取所有
+   6.2  过滤数组 arr.some()  - 满足条件 返回 return  item==true; 只要找到为true的就结束
+   6.2  过滤数组 arr.every()  - 满足条件 返回 return   item==true; 所有的都满足才返回true，否则返回false
+
+
+对象 
+var obj = { name:'zzq',age:22} ;
+1. 对象的复制
+    1.1  遍历 对象  
+for (var key  in obj_1) {
+      obj_2[key] = obj_1[key];
+}
+obj.key【对象.属性 表示通过对象获取属性 key指属性】
+obj[key] 【key解析为变量的值】
+
+
+
+obj instanceof Object  判断obj是不是对象类型
+只能用这种方式遍历对象  -- obj[ key ]
+也可以遍历数组 key 代表数组的下标
+
+
+var  a= 3
+alert（window.a）
+a相当于window中的一个属性
+
+function fn（）{ this }
+this指window
+this当前：函数--事件源
+
+
+console.dir();打印的是对象的属性和方法
+
+Dom节点 ----  Dom 对象
+Dom节点  (标签节点 属性节点  文本节点....)
+Dom 对象  (标签对象  )
+
+在Dom树上的属性  ---  dir（） 打印，在Dom树上显示
+   设置  元素.newSrc =  './a.jpb'
+   获取  元素.newSrc
+
+在标签上的属性  ----   在标签上显示
+ 1.自定义属性
+     获取  元素.getAttrubute('newSrc')
+     设置  元素.setAttribute ('newSrc', ' ./a.jpb')
+  2.固有属性
+     获取 img.src
+     设置 元素.src = './b.jpg’
+
+
+控制台 console
+DOM   : 文档对象模型
+    1. 获取DOM节点--方法(获取元素对象)
+         1.1  getElementById("box") : 获取id名,用字符串的形式   返回Dom节点(标签)
+         1.2  getElementsByTagName("input") : 获取标签,  返回伪数组,可以用for循环
+         1.3  getElementsByClassName("box") : 获取类名 ,返回伪数组,可以用for循环
+         1.4  querySelector("#box") : 获取css选择器 , 
+         1.5  querySelectAll("input") : 获取所有的~~~,返回伪数组,可以用for循环
+         1.6   #box . querySelsector('li') 获取box下的li
+
+    创建DOM节点--方法
+         .1 documunt . createElement("li"); //动态创建 不显示
+             document . write ( ) ;
+    添加Dom节点--方法
+         .1 父级元素 . appendChild(添加的标签)
+         .2 父级元素 . insertBefore(添加的标签 , 指定谁前加)
+    删除DOM节点 --方法
+         .1 父级元素 . removeChild(指定删除的元素)   
+    修改(或获取)DOM节点下的结构
+         .1 元素 . innerHTML = "添加的结构,可识别标签"
+    修改DOM节点下的文本内容
+         .1 元素 . innerText = "给创建的标签加文本内容";
+   a. 获取DOM节点 ---属性
+         a.1 children : 获取所有子元素
+         a.2 parentNode : 获取父元素
+         a.3 Sibing :获取兄弟元素
+	nextElementSibling;下一个兄弟
+	previousElementSibing;上一个兄弟
+
+    2. 注册事件
+         2.1  点击事件  onclick
+         2.2  获得焦点  onfocus
+         2.3  失去焦点  onblur
+         2.4  鼠标按下  mousedown
+         2.5  鼠标移动  mousemove
+         2.6  鼠标松开  mouseup
+         2.7  鼠标移上  mouseover
+         2.7  鼠标移开  mouseout
+         2.8  键盘按键  onkeydown
+         2.9  按键弹起  onkeyup
+         2.9  表单提交事件 onsubmit
+         2.9  表单 oninput事件 
+         2.10 onscoll  有滚动条事件
+	scollTop  :表示卷入的高度(子元素比父元素高 父元素有overflow:auto;)
+         监听事件(不会被覆盖)   box.addEventListener("click" , function(){ });   
+
+
+    3. 属性(操作DOM节点元素的属性)
+         3.1  标准属性
+	样式属性 : div . style  //返回对象 只返回行内样式  div.style.width = "200px";
+		div.className //返回的是字符串  div.className = "box  bg_red" ;
+		div.className=  div.className + " bg-red" ;//在原类名上添加新类名,类名间需要有空格,不友好,一直添加	
+	nodeName  返回DOM节点的大写标签名
+	value   src  title   //获取文本域内容 textarea . value
+	checked    radio   disable(只有两个状态btn.checked = true)
+        3.2  classList   返回的是对象
+	添加类名:  div.classList . add("bg-red")
+	移除类名 : div.classList . remove("bg-red");
+	切换类名 : div. clssList .toggle("bg-red"); 
+        3.3  自定义属性 : 命名规则  data-名字 = "";  (例如:data-name = "张三");
+		获取属性  div . dataset 返回的是对象.    div.dataset.name 
+		使用场景  :  数据与数据一一对应,要写入自定义属性
+        3.4  自定义属性 : 获取属性 getAttribute("自定义的属性名")
+		添加属性  setAttribute("属性名" , "属性值");
+		删除属性  removeAttribute("属性名");
+        	
+   4. 案例
+        4.1  点击按钮 开关灯 (改变背景颜色)
+        4.2  点击按钮 切换图片
+        4.3  获取光标--显示图片  失去光标--图片隐藏	
+        4.3  全选与取消
+
+  5. 事件对象 function(e){}
+        5.1  e(event) 叫做事件对象
+        5.2  事件对象-属性  
+	获取可视区域的位置  e.clientX  e.clientY
+	获取页面的位置  e.pageX  e.pageY
+	获取点击的对象 e.target
+	获取事件的绑定对象  e.currentTarget  
+        5.3  事件对象-方法
+	停止捕获  e.stopPropagtion()
+	阻止默认行为  e.preventDefault()
+
+   6. 获取元素距页面的位置
+        6.1   元素 . offsetLeft  (box.offsetLeft) //返回位置的数字  offsetLeft = margin-left + left;      	
+       	 offsetLeft  只可以获取位置 不能设置(设置可通过 style.left="200px")	
+        6.2   元素 . offsetTop  (box.offsetTop)  //返回位置的数字
+        6.3   offsetparent  //找有定位的父元素 没有定位的父元素 找body  返回标签
+ 
+   a. 获取元素的实际宽高  (返回的是数字类型)
+         a.1   offsetWidth    offsetWidth = width +border  + padding
+         a.2   offsetHeight
+   b. 获取元素的内容区域宽高
+         b.1    clientWidth  
+         b.2    clientHeight
+	    
+
+  
+   7. 事件三个阶段
+        捕获  到达目标 冒泡
+        1.冒泡 (程序默认冒泡 false) : 从点击的目标(自己) 到 根元素  一一触发
+        2. 捕获 : 从根元素 到点击的目标(自己) 一一触发
+   8. 事件解绑
+        8.1  box . onclick = function (){ box.onclick = null } 
+        82  box . removeEventListener ("click",fn) 
+   9. 事件委托 
+        由于程序默认冒泡 ,所以不给子元素注册事件,给父元素注册,点击子元素时,父元素会触发   
+        场景 : 用在新增的标签,新增的标签与之前的注册事件一样
+
+   10.BOM(browse object model)
+         浏览器对象 window
+         所有的全局变量和全局函数都是window对象的属性和方法
+         window.onload = function(){  想要获取图片的宽高，就需要等待图片加载完成后才执行后面的函数；}
+
+   11. 定时器
+        11.1 一次性定时器 var timer =  setTimout (函数 , 延迟时间)  1000毫秒 = 1s
+        11.2 永久性定时器 var timer =  setInterval (函数 , 间隔时间)
+        11.3 清除定时器  clearTimout(timer)  clearInterval (参数)
+
+   12. BOM-属性
+          12.1  onload  等待静态页面加载完毕在执行
+          12.2  location.href = "http://www.jd"
+          12.3  getComputedStyle(box) //获取DOM(页面)上所有的样式  div.style(获取行内样)
+          12.4  history 历史记录   history.back()  history.before()
+          12.5  navigator：浏览器对象     navigator.userAgent : 浏览器信息 
+          12.6  screen 
+
+
+   13. 本地存储(没有服务器就存到浏览器)
+        13.1 localStorage . setItem("键", 值); 添加到本地 键名是自己起, 值是要存的字符串 
+        13.2 localStorage . getItem("键") ; 获取存储内容
+        13.3 localStorage . removeItem("键") ; 清除存储内容
+        13.4 localStorage . clear(); 清除所有
+
+  14 . JSON (字符串格式)
+        14.1 使用  存入本地的 , 只能是字符串形式, 对于一些复杂类型 ,要先转换为JSON(字符串格式);
+        14.2  数组转 JSON    var str = JSON . stringify( arr );
+        14.3  JSON 转 数组   var arr = JSON . parse ( str );
+  15 . 案例 
+        15.1 微博发布
+
+  16. addEventListener
+        16.1 过渡是有鼠标触发
+        	配合过渡效果(在css设置过渡效果),过渡执行完成,执行函数 
+	box.addEventListener("transitionend",function(){  })
+         16.2.动画
+	动画页面打开就执行
+                配合动画效果(在css设置过渡效果),过渡执行完成,执行函数
+     	box.addEventListener("animiationend",function(){  })
+
+
+a.  移动端事件
+     不适用click事件 不友好,移动端有单击双击判断
+         触摸事件
+         a.1  touchstart
+         a.2  touchmove
+         a.3  touchend
+         滑动事件
+         a.4  swipeLeft
+         a.5  swipeRight
+         事件对象
+         a.6  touchstart
+         a.7  touchmove
+         a.8  touchend
+
+b.  zepto类库
+js文件
+中文API：https://www.html.cn/doc/zeptojs_api/
+         b.1 获取元素    $(选择器);
+         b.2 注册事件    事件源 . on(事件类型 , function(){})
+         b.3 修改样式    对象.css (属性名,属性值);
+	box.css("width","200px");  
+	box.css( {width:"200px" , height: "100px" } )
+         b.4  操作DOM节点
+	box . append("<span>标签</span>")
+         b.5  获取宽度
+	box . width()
+
+c.  封装手势 touch.js 
+         c.1  touch模块的使用
+         c.2  可以直接使用on（）的方式注册
+         c.3  可以使用事件名称作为方法使用 
+d.  swiper插件
+    中文官网 ：https://www.swiper.com.cn/
+
+
+jQuery  
+
+页面加载
+$(document).ready(function(){ })
+$(function(){  })
+
+jQ对象--Dom对象互转
+转 jq对象  $(元素)  $(this)
+转DOM对象  $('div')[0]  $('div').get[0]
+获取元素
+  1. css选择器(有引号)--返回伪数组
+       $('div')  （标签 类 id 后代 子代 伪类）
+   2. 特有属性
+       $('li : first')
+       $('li : last')
+       $('li : eq(0)') 
+   3. 方法
+      $('div').parent() //直接父
+      $('div').parents(['选择器']) //所有父元素
+      $('div').children(['选择器']) //直接子
+      $('div').find(['选择器'])  //所有子元素
+      $('div').siblings(['选择器']) //兄弟元素
+获取下标 
+       $('div').index()
+查类名,返回布尔值
+      $('div').hasClass(类名);
+添加,删除类名
+    1. 添加  $('div').addClass()
+    2. 添加  $('div').removeClass()
+    3. 切换  $('div').ToggleClass()
+显示,隐藏(动画)  前加 stop()
+    方法名([speed],[easing].[fn])
+    1. hide()  show()  toggle()
+    2. 滑动 slideUp()  slideDown()  slideToggle()
+    3. 淡入淡出 fadeOut()  fadeIn()  toggle() fadeToggle()  fadeTo() 
+    4. 自定义 animate({属性:属性值 , 属性:属性值 ,},1000)
+获取 , 设置标签内的属性
+     1. 获取 , 设置固有属性 $('div'). prop(  '属性' ,'属性值')
+     2. 获取 , 设置自定义属性 $('div'). attr( '属性' ,'属性值' )
+获取 , 设置标签内的内容
+     1. 控件  $(' ') .val([值])
+     2. 其他  $(' ') .text([内容])
+     3. 其他  $(' ') .html([内容+标签])
+获取元素的大小
+     1.获取内容区域的大小
+	$('div').width();
+     2.获取width+padding大小
+	$('div').innerWidth();
+     3.获取实际大小width+padding+border
+	$('div').outerWidth();
+     4.获取width+padding+border+margin大小
+	$('div').outerWidth(true);
+获取元素的位置
+     1. 获取的是当前元素相对于整个页面的距离(跟父元素无关)
+          1.$('div').offset() //返回对象
+          2.$('div').offset().top  //距上的距离
+          3.$('div').offset().left  //距左的距离
+     2. 当前父元素与定位 ,则是距离父元素的位置 ,如没有定位 就参照整个文档
+          1.$('.one').position(); //返回对象 left  top
+          2.$('.one').position().top;//距上的位置
+     3. scrollTop获取内容区域滚动出去的距离
+        获取内容区域滚动出去的距离,**需要注册scroll事件
+       $('window').scroll(function(){
+            //获取页面 滚动出去的距离
+            $('html').scrollTop()  //值
+       })
+
+创建标签(元素)
+     1. $('<div></div> ')
+添加标签(元素)
+      1.添加的是子元素
+           1. 末尾加 $(' ').append(创建的元素)
+           2. 开头加 $(' ').prepend(创建的元素)
+      2.添加的是兄弟元素
+           1. 当前元素后 $(' ').after(创建的元素)
+           2. 当前元素前 $(' ').before(创建的元素)
+删除元素
+      1.  $(' ').remove() //删除
+      2.  $(' ').empty()  //清空内容
+删除或添加元素
+      1.  $(' ').html(' ')
+      2.  $(' ').html('变量名 ')
+jQ遍历
+      1.通常适用于数组 ，对象的遍历
+	$.each('arr',function(index,element){ })
+      2.常用于JQ对象
+	$('li').each(function(i,item){ })
+
+注册事件
+    1. 普通方式 
+	$('div').click( function(){ } )
+    2. on 的方式
+	$('div').on('click',function(){} ) ---绑定一个事件
+	$('div').on(
+	事件类型: 处理程序,
+	事件类型: 处理程序,
+	)  ---绑定多个事件
+    3. 委托方式注册事件
+        有动态创建的元素，必须用on方式注册
+	$('.box').on('事件类型','选择器',function(){ })
+解绑事件
+     语法 : jQ对象 . off( )
+     1.解绑事件
+	$('div').off('click'); //解绑click事件
+	$('div').off(); //解绑所有
+     2.解绑委托事件
+	$('.box').off("click",'.one')
+拷贝函数
+      语法 : $ .extend([deep] ,targetObject , currentObject)
+	- deep得值 :默认值false,代表是浅拷贝
+	- targetObject : 用来接收拷贝对象的
+	- currentObject : 别拷贝的对象
+
+
+ES6
+面向过程：小项目 步骤
+面向对象：大项目 对象
+类：泛指
+对象：方法和属性的集合
+创建类 class 类名{} ---  实例化对象 new 类
+添加属性：放在构造函数里constructor（形参）{this.属性名 = 属性值 }
+添加方法： 方法名（）{ }
+类的继承  extends 
+     super
+注意点
+1.不提升 有顺序
+2.this的指向  在构造函数中-指向实例化对象   在方法中--指向调用者
+3.在类里面调用属性和方法
+
+创建标签
+insertAdjacentHTML(position , text)
+position: 
+兄弟元素 
+beforebegin
+afterbegin
+子元素：
+beforeend
+afterend
+
+
+
+获取父窗口
+window.parent
+
+获取子窗口
+.contentWindow
+
+
+获取表单的内容
+   有name属性的表单元素的value值
+   结合ajax使用 contentType:false, processData:false   
+   var formdata = new ForemData($('form')[0]);【传入的必须是Dom对象】
+  
+追加内容
+formdata.appent('name','zzq')
+
+
+
+模板引擎
+
+www.baidu.com?name='zz'&age='22'
+拿到地址栏 ？之后的参数
+window.location.search 【?name='zz'&age='22'】
+var dataStr = slice(1);【name='zz'&age='22'】
+dataStr.split('&');【[name='zz'，age='22']】
+split('='); 【[name,'zz']，[age,'22']】
+obj[eachData[0]] = eachData[1];
+
+
+
+
+
+
+
+  
+ 
+
+
+
+	
+

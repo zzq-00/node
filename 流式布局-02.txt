@@ -1,0 +1,49 @@
+﻿了解移动端的现状
+内核，分辨率
+二倍图
+流式布局
+1.宽度使用百分比控制，也属于传统布局
+2.调试
+3.viewport
+  a.<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,       maximum-scale=1.0, minimum-scale=1.0">
+   width=device-width：改变HTML默认的980px为屏幕的宽度；
+   user-scalable: 是否允许用户缩放屏幕值：no(0不允许) yes(1允许)；
+   initial-scale：初始化缩放比例；1.0：不缩放；
+   maximum-scale：用户对页面的最大缩放比例；值：比例
+   minimum-scale：用户对页面的最小缩放比例；值：比例
+4.浏览器前缀
+5.background-size
+  a.background-size：100%;表示相对于当前盒子的宽高
+  b.background-size:100px;表示宽度100px，高度自适应
+  c.background-size:cover;铺满盒子，绝对不留白
+  d.background-size:contain;绝对把图片显示完全
+6.二倍图--精灵图的使用
+  a.在FW打开，缩小到图片的一倍
+  b.测量，写入背景精灵图的位置
+  c.不保存缩小，测量后的FW图片
+
+7.css3的盒子模型
+  a.传统盒子【盒子的宽(高)=width+padding-left+border-right】
+  b.css3的盒子模型
+   ..box-size:border-box;【盒子的宽度=css3设置的宽度】
+   ..应用场景：左右侧固定，右侧随意拉伸【左右盒子绝对定位脱标，大盒子设置padding值拉伸】
+8.流式布局
+	width:100%;overflow:hidden;【清除浮动的方式】
+	a.宽度使用百分比控制
+	b.浮动
+	c.清除浮动
+9.margin特性
+  一个盒子，没有明确的宽度width属性值，设置margin值，会向内挤（高同理）
+10.固定定位fixed
+	a.如设置width:"100%";是基于浏览器的可视窗口的宽度
+	b.设置了固定定位的元素不受父元素宽度的约束，需要设置最小(最大)宽度min-width(max-width)
+
+
+
+
+
+
+
+
+
+

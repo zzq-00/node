@@ -1,0 +1,2331 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link rel=File-List href="DOM和BOM.files/filelist.xml">
+<style id="DOM和BOM_6831_Styles">
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+.font06831
+	{color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;}
+.font56831
+	{color:windowtext;
+	font-size:9.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;}
+.font66831
+	{color:red;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;}
+.font76831
+	{color:red;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;}
+.font86831
+	{color:red;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:italic;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;}
+.xl636831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl646831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl656831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl666831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl676831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:1.5pt solid windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:.5pt dashed windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl686831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:#3F3F76;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:1.5pt solid windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:.5pt dashed windowtext;
+	background:#FFCC99;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl696831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:1.5pt solid windowtext;
+	border-left:.5pt dashed windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl706831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:1.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt dashed windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl716831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:none;
+	border-bottom:.5pt dashed windowtext;
+	border-left:.5pt dashed windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl726831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:none;
+	border-bottom:1.5pt solid windowtext;
+	border-left:.5pt dashed windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl736831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl746831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	background:#F2DCDB;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl756831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#F2DCDB;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl766831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:red;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:underline;
+	text-underline-style:single;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	background:#F2DCDB;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl776831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:red;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:underline;
+	text-underline-style:single;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#F2DCDB;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl786831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl796831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl806831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl816831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	background:#DCE6F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl826831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#DCE6F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl836831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#EBF1DE;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl846831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	background:#FDE9D9;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl856831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#FDE9D9;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl866831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#D1FDFF;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl876831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#FBFFA3;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl886831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	background:#CCC0DA;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl896831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#CCC0DA;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl906831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:red;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#FBFFA3;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl916831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#B8CCE4;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl926831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl936831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	background:#F2F2F2;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl946831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:none;
+	border-left:1.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl956831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:none;
+	border-left:.5pt dashed windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl966831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:none;
+	border-bottom:none;
+	border-left:.5pt dashed windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl976831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:none;
+	border-left:1.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl986831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.5pt solid windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl996831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:1.5pt solid windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:.5pt dashed windowtext;
+	background:#F2F2F2;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1006831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:1.5pt solid windowtext;
+	border-right:none;
+	border-bottom:.5pt dashed windowtext;
+	border-left:.5pt dashed windowtext;
+	background:#F2F2F2;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1016831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:1.5pt solid windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	background:#F2F2F2;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1026831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:1.5pt solid windowtext;
+	border-right:1.5pt solid windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:.5pt dashed windowtext;
+	background:#F2F2F2;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1036831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:#3F3F76;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	background:#FFCC99;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1046831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:#3F3F76;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#FFCC99;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1056831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	background:#DCE6F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1066831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	background:#DCE6F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1076831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:1.5pt solid windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:.5pt dashed windowtext;
+	background:#DCE6F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1086831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1096831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:1.5pt solid windowtext;
+	border-left:1.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl1106831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:1.5pt solid windowtext;
+	border-left:1.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl1116831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt dashed windowtext;
+	border-right:1.5pt solid windowtext;
+	border-bottom:1.5pt solid windowtext;
+	border-left:.5pt dashed windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl1126831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:1.5pt solid windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:.5pt dashed windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl1136831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.5pt solid windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1146831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:1.5pt solid windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:.5pt dashed windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1156831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:12.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.5pt solid windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:.5pt dashed windowtext;
+	background:#F2F2F2;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl1166831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:12.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.5pt solid windowtext;
+	border-right:1.5pt solid windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:.5pt dashed windowtext;
+	background:#F2F2F2;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl1176831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt dashed windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl1186831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:12.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.5pt solid windowtext;
+	border-right:none;
+	border-bottom:.5pt dashed windowtext;
+	border-left:.5pt dashed windowtext;
+	background:#F2F2F2;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl1196831
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:12.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.5pt solid windowtext;
+	border-right:.5pt dashed windowtext;
+	border-bottom:.5pt dashed windowtext;
+	border-left:1.5pt solid windowtext;
+	background:#F2F2F2;
+	mso-pattern:black none;
+	white-space:nowrap;}
+ruby
+	{ruby-align:left;}
+rt
+	{color:windowtext;
+	font-size:9.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-char-type:none;}
+-->
+</style>
+</head>
+
+<body>
+<!--[if !excel]>　　<![endif]-->
+<!--下列信息由 Microsoft Excel 的发布为网页向导生成。-->
+<!--如果同一条目从 Excel 中重新发布，则所有位于 DIV 标记之间的信息均将被替换。-->
+<!----------------------------->
+<!--“从 EXCEL 发布网页”向导开始-->
+<!----------------------------->
+
+<div id="DOM和BOM_6831" align=center x:publishsource="Excel">
+
+<table border=0 cellpadding=0 cellspacing=0 width=1437 class=xl636831
+ style='border-collapse:collapse;table-layout:fixed;width:1077pt'>
+ <col class=xl656831 width=22 style='mso-width-source:userset;mso-width-alt:
+ 768;width:16pt'>
+ <col class=xl636831 width=36 style='mso-width-source:userset;mso-width-alt:
+ 1280;width:27pt'>
+ <col class=xl636831 width=206 style='mso-width-source:userset;mso-width-alt:
+ 7338;width:155pt'>
+ <col class=xl636831 width=247 style='mso-width-source:userset;mso-width-alt:
+ 8789;width:185pt'>
+ <col class=xl636831 width=171 style='mso-width-source:userset;mso-width-alt:
+ 6087;width:128pt'>
+ <col class=xl636831 width=328 style='mso-width-source:userset;mso-width-alt:
+ 11662;width:246pt'>
+ <col class=xl636831 width=241 style='mso-width-source:userset;mso-width-alt:
+ 8561;width:181pt'>
+ <col class=xl636831 width=186 style='mso-width-source:userset;mso-width-alt:
+ 6599;width:139pt'>
+ <tr height=37 style='mso-height-source:userset;height:27.6pt'>
+  <td height=37 class=xl1136831 width=22 style='height:27.6pt;width:16pt'>　</td>
+  <td class=xl1146831 width=36 style='border-left:none;width:27pt'>　</td>
+  <td class=xl1156831 width=206 style='border-left:none;width:155pt'>属性</td>
+  <td class=xl1156831 width=247 style='border-left:none;width:185pt'>说明</td>
+  <td class=xl1186831 width=171 style='border-left:none;width:128pt'>使用</td>
+  <td class=xl1196831 width=328 style='width:246pt'>方法</td>
+  <td class=xl1156831 width=241 style='border-left:none;width:181pt'>说明</td>
+  <td class=xl1166831 width=186 style='border-left:none;width:139pt'>参数/返回值/使用</td>
+ </tr>
+ <tr height=56 style='mso-height-source:userset;height:42.0pt'>
+  <td height=56 class=xl736831 width=22 style='height:42.0pt;border-top:none;
+  width:16pt'>1</td>
+  <td class=xl1176831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>DOM<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>对象.className</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>添加或修改元素对象的类样式属性</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>需要在原来类名基础上加类名时用+<span style='mso-spacerun:yes'>&nbsp;
+  </span>类名加空格</td>
+  <td class=xl746831 width=328 style='border-top:none;width:246pt'>document.getElementById(&quot;ID&quot;)</td>
+  <td class=xl756831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>获取元素ID</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：ID，字符串<br>
+    返回值：DOM节点/对象</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>2</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>对象.value</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>获取或设置元素对象的内容属性</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl746831 width=328 style='border-top:none;width:246pt'>document.getElementsByTagName(&quot;tagname&quot;)<span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td class=xl756831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>根据标签名获取元素</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：标签名 #div<br>
+    返回值：DOM节点/对象</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>3</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>对象.checked</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>是否被选中</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>对象.checked=true/false</td>
+  <td class=xl746831 width=328 style='border-top:none;width:246pt'>document.getElementsByClassName(&quot;字符串&quot;)</td>
+  <td class=xl756831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>根据元素类名获取元素</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：类名 .class<br>
+    返回值：DOM节点/对象</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>4</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>对象.style</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>修改对象CSS样式</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>对象.style.fontSize</td>
+  <td class=xl766831 width=328 style='border-top:none;width:246pt'>document.querySelector(&quot;css选择器&quot;)</td>
+  <td class=xl776831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>获取一个DOM节点</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：css选择器<br>
+    返回值：DOM节点</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>5</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl786831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.offset<font class="font66831">Height</font></td>
+  <td class=xl786831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>盒子的实际高度</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl766831 width=328 style='border-top:none;width:246pt'>document.querySelectorAll(&quot;css选择器1,css选择器2&quot;)</td>
+  <td class=xl776831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>根据选择器获取所有满足条件的元素</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：css选择器<br>
+    返回值：DOM节点</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>6</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl786831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.offset<font class="font66831">Width</font></td>
+  <td class=xl786831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>盒子的实际宽度</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl746831 width=328 style='border-top:none;width:246pt'>document.write(&quot;&quot;)</td>
+  <td class=xl756831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>在网页中显示</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：字符串<br>
+    返回值：字符串</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>7</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl786831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.offset<font class="font66831">Top<span
+  style='mso-spacerun:yes'>&nbsp;</span></font></td>
+  <td class=xl796831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>距离offsetParent元素的垂直距离</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl766831 width=328 style='border-top:none;width:246pt'>document.createElement
+  (&quot;标签名&quot;)</td>
+  <td class=xl776831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>创建新的DOM节点</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：标签<br>
+    返回值：标签</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>8</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl796831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.offset<font class="font66831">Left</font></td>
+  <td class=xl796831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>距离offsetParent元素的水平距离</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>document.oncontextmenu()</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>页面右键事件，查看右键菜单</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>9</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl786831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>对象.offset<font class="font66831">Parent<span
+  style='mso-spacerun:yes'>&nbsp;</span></font></td>
+  <td class=xl786831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>　</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>　</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>　</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>10</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl756831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.clientWidth</td>
+  <td class=xl756831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>可视区域的宽度</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl816831 width=328 style='border-top:none;width:246pt'>对象.<font
+  class="font66831">get</font><font class="font06831">Attribute(&quot;属性名&quot;)</font></td>
+  <td class=xl826831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>获取自定义属性</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：属性名<br>
+    返回值：字符串</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>11</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl756831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.clientHeight</td>
+  <td class=xl756831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>可视区域的高度</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl816831 width=328 style='border-top:none;width:246pt'>对象.<font
+  class="font66831">set</font><font class="font06831">Attribute(&quot;属性名&quot;)</font></td>
+  <td class=xl826831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>添加或者修改属性的值</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：属性名,属性值<br>
+    返回值：</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>12</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl836831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>事件对象.clientX</td>
+  <td class=xl836831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>事件对象在<font class="font76831">可视区域坐标系</font><font
+  class="font06831">的横坐标</font></td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl816831 width=328 style='border-top:none;width:246pt'>对象.<font
+  class="font66831">remove</font><font class="font06831">Attribute(&quot;属性名&quot;)</font></td>
+  <td class=xl826831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>删除某个属性</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：属性名<br>
+    返回值：</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>13</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl836831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>事件对象.clientY<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td class=xl836831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>事件对象在<font class="font76831">可视区域坐标系</font><font
+  class="font06831">的纵坐标</font></td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl846831 width=328 style='border-top:none;width:246pt'>元素.<font
+  class="font66831">append</font><font class="font06831">Child（子元素）</font></td>
+  <td class=xl856831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>添加节点</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：<br>
+    返回值：</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>14</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl866831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>事件对象.pageX</td>
+  <td class=xl866831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>事件对象在<font class="font86831">页面坐标系</font><font class="font06831">中的横坐标</font></td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl846831 width=328 style='border-top:none;width:246pt'>父元素.insertBefore(新的子元素,旧的子元素)</td>
+  <td class=xl856831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>添加节点</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：<br>
+    返回值：</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>15</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl866831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>事件对象.pageY</td>
+  <td class=xl866831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>事件对象在<font class="font86831">页面坐标系</font><font class="font06831">中的纵坐标</font></td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl846831 width=328 style='border-top:none;width:246pt'>父元素.<font
+  class="font66831">remove</font><font class="font06831">Child(要删除的子元素);</font></td>
+  <td class=xl856831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>删除节点</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：<br>
+    返回值：</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>16</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>事件对象.target</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>事件的目标对象，用户点击到哪个DOM节点上，那它就是；用于事件委托</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>对象.removeEventListener(事件类型,事件处理程序)</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>删除事件监听，即事件解绑，事件注销</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp;
+  </span>数：事件处理function<br>
+    返回值：</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>17</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>事件对象.currentTarget</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>事件的绑定对象，事件绑定在哪个DOM<br>
+    节点上，那它就是</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>e.currentTarget==this</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>对象.addEventListener(事件类型,事件处理程序,控制符)</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>添加事件监听，可以多次注册事件</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp;
+  </span>数：事件处理function<br>
+    返回值：</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>18</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl876831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.onmouse<font class="font66831">over</font></td>
+  <td class=xl876831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>鼠标 移入</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl886831 width=328 style='border-top:none;width:246pt'>对象.classList.add(&quot;类名，类名...&quot;)</td>
+  <td class=xl896831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>添加类名</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：类名<span
+  style='mso-spacerun:yes'>&nbsp; </span>.class<br>
+    返回值：类名</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>19</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl876831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.onmouse<font class="font66831">out</font></td>
+  <td class=xl876831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>鼠标 移出</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl886831 width=328 style='border-top:none;width:246pt'>对象.classList.remove(&quot;类名，类名...&quot;)</td>
+  <td class=xl896831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>删除类名</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：类名<span
+  style='mso-spacerun:yes'>&nbsp; </span>.class<br>
+    返回值：类名</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>20</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl876831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.onmouse<font class="font66831">move</font></td>
+  <td class=xl876831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>鼠标 移动</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl886831 width=328 style='border-top:none;width:246pt'>对象.classList.toggle(&quot;类名，类名...&quot;)</td>
+  <td class=xl896831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>切换类名</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：类名<span
+  style='mso-spacerun:yes'>&nbsp; </span>.class<br>
+    返回值：类名</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>21</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl876831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.onmouse<font class="font66831">down</font></td>
+  <td class=xl876831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>鼠标 按下</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>事件对象.stopPropagation
+  ( );</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>阻止冒泡</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：<br>
+    返回值：</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>22</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl876831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.onmouse<font class="font66831">up</font></td>
+  <td class=xl876831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>鼠标 松开</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>事件对象.preventDefault
+  ( );</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>阻止默认行为</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：<br>
+    返回值：</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>23</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl906831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>对象.onclick</td>
+  <td class=xl876831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>鼠标 点击事件</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>对象.onfocus(&quot;
+  &quot;);</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>获得焦点后执行的操作</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：<br>
+    返回值：</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>24</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl786831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>对象.focus</td>
+  <td class=xl786831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>获得 光标焦点</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>对象.onblur(&quot;
+  &quot;);</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>失去焦点后执行的操作</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>参<span style='mso-spacerun:yes'>&nbsp; </span>数：<br>
+    返回值：</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>25</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl786831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>对象.blur</td>
+  <td class=xl786831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>失去 光标焦点</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>　</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>　</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>26</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl916831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>对象.inner<font class="font76831">HTML</font></td>
+  <td class=xl916831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>获取或者设置某个元素的HTML结构</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>$(选择器)</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>var box = $(选择器)</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>返回值是一个伪数组 称为 zepto对象</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>27</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl916831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>对象.inner<font class="font76831">Text</font></td>
+  <td class=xl916831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>获取或设置某个元素里面的文本内容</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>zepto的事件源.on(事件类型,处理程序);</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>注册事件</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>28</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl756831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>父元素.children</td>
+  <td class=xl756831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>获取子元素</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>zepto对象.css(属性名,属性值)</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>修改样式<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>box.css(&quot;width&quot;,&quot;200px&quot;)</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>29</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl756831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.parentNode</td>
+  <td class=xl756831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>获取父元素</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>append</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>操作DOM节点</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>box.append('&lt;a href=&quot;#&quot;&gt;百度&lt;/a&gt;');</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>30</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.nextElementSibling</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>得到下一个兄弟元素</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>$('.box').on('tap',function(){}）</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>tap点击</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>31</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl926831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.previousElementSibling</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>得到上一个兄弟元素</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>$(&quot;.box&quot;).on('swipeLeft',
+  function(){} ）</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>滑动</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>swipeLeft<span style='mso-spacerun:yes'>&nbsp; </span>左滑<br>
+    swiperight<span style='mso-spacerun:yes'>&nbsp; </span>右滑</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>32</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl836831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>对象.onkey<font class="font66831">up<span
+  style='mso-spacerun:yes'>&nbsp;&nbsp;</span></font></td>
+  <td class=xl836831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>按键弹起</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>　</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>　</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>33</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl836831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>对象.onkey<font class="font66831">down</font><font
+  class="font06831"><span style='mso-spacerun:yes'>&nbsp;</span></font></td>
+  <td class=xl836831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>键盘按下</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>　</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>　</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>34</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>transitionend</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>元素的过渡动画结束的时候触发</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>只能用addEventListener的方式注册</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>　</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>　</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=59 style='mso-height-source:userset;height:44.4pt'>
+  <td height=59 class=xl736831 width=22 style='height:44.4pt;border-top:none;
+  width:16pt'>35</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>animationend</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>会在帧动画结束的时候触发</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>两个事件设计DOM节点，要设置CSS的过渡和动画，不然不会生效</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>　</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>　</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=59 style='mso-height-source:userset;height:44.4pt'>
+  <td height=59 class=xl736831 width=22 style='height:44.4pt;border-top:none;
+  width:16pt'>　</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>元素.scrollTop</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>卷入滚动条的高度</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl936831 width=328 style='border-top:none;width:246pt'>事件</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>　</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=59 style='mso-height-source:userset;height:44.4pt'>
+  <td height=59 class=xl736831 width=22 style='height:44.4pt;border-top:none;
+  width:16pt'>　</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>事件对象.touches</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>屏上面的触摸点</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>e.touches</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>touchstart</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>会在手指触摸到屏幕的时候触发</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=59 style='mso-height-source:userset;height:44.4pt'>
+  <td height=59 class=xl736831 width=22 style='height:44.4pt;border-top:none;
+  width:16pt'>　</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>事件对象.targetTouches</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>元素上面的触摸点</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>e.targetTouches</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>touchmove</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>会在手指触摸到屏幕，移动的过程中<br>
+    触发</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=59 style='mso-height-source:userset;height:44.4pt'>
+  <td height=59 class=xl946831 width=22 style='height:44.4pt;border-top:none;
+  width:16pt'>　</td>
+  <td class=xl956831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl956831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>事件对象.changedTouches</td>
+  <td class=xl956831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>获取手指离开屏幕时的点</td>
+  <td class=xl966831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>e.changedTouches</td>
+  <td class=xl976831 width=328 style='border-top:none;width:246pt'>touchend</td>
+  <td class=xl956831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>会在手指离开屏幕的瞬间触发</td>
+  <td class=xl706831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl986831 width=22 style='height:30.0pt;width:16pt'>36</td>
+  <td class=xl1126831 width=36 style='border-left:none;width:27pt'>BOM</td>
+  <td class=xl996831 width=206 style='border-left:none;width:155pt'>　</td>
+  <td class=xl996831 width=247 style='border-left:none;width:185pt'>　</td>
+  <td class=xl1006831 width=171 style='border-left:none;width:128pt'>　</td>
+  <td class=xl1016831 width=328 style='width:246pt'>　</td>
+  <td class=xl996831 width=241 style='border-left:none;width:181pt'>　</td>
+  <td class=xl1026831 width=186 style='border-left:none;width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>37</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>window.onload<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>最后加载<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>window.onload =<br>
+    <span style='mso-spacerun:yes'>&nbsp;</span>function(){}<span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td class=xl1036831 width=328 style='border-top:none;width:246pt'>setTimout</td>
+  <td class=xl1046831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>一次性定时器</td>
+  <td class=xl686831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>var timer = setTimout<br>
+    (函数,延迟的毫秒数)</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>38</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>location<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>跳转浏览器</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>location.href</td>
+  <td class=xl1056831 width=328 style='border-top:none;width:246pt'>clearTimeout(timer)</td>
+  <td class=xl1066831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>停止一次性的定时器</td>
+  <td class=xl1076831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>39</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>　</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>　</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl1036831 width=328 style='border-top:none;width:246pt'>setInterval</td>
+  <td class=xl1046831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>永久性的定时器</td>
+  <td class=xl686831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>var timer = setInterval<br>
+    (函数,间隔);</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>40</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>　</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>　</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl1056831 width=328 style='border-top:none;width:246pt'>clearInterval(timer);</td>
+  <td class=xl1066831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>清除永久定时器</td>
+  <td class=xl1076831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>41</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>　</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>　</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl1086831 width=328 style='border-top:none;width:246pt'>localStorage.setItem(键名,值);</td>
+  <td class=xl786831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>增加</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>42</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>　</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>　</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl1086831 width=328 style='border-top:none;width:246pt'>localStorage.removeItem(键名);</td>
+  <td class=xl786831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>删除</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>43</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>　</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>　</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl1086831 width=328 style='border-top:none;width:246pt'>localStorage.getItem(键名);</td>
+  <td class=xl786831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>查询</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>44</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>　</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>　</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl1086831 width=328 style='border-top:none;width:246pt'>localStorage.clear
+  ( );</td>
+  <td class=xl786831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>全部清空</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl736831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>45</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>　</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>　</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>JSON.stringify(对象)</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>将对象转换为json格式的字符串</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>返回值：一个满足json格式<br>
+    的字符串</td>
+ </tr>
+ <tr height=62 style='mso-height-source:userset;height:46.2pt'>
+  <td height=62 class=xl736831 width=22 style='height:46.2pt;border-top:none;
+  width:16pt'>46</td>
+  <td class=xl666831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl666831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>　</td>
+  <td class=xl666831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>　</td>
+  <td class=xl716831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl806831 width=328 style='border-top:none;width:246pt'>JSON.parse(json格式字符串)</td>
+  <td class=xl666831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>将json格式的字符串转换为对象</td>
+  <td class=xl676831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>返回值：依赖于你的json<br>
+    格式字符串，可能返回数组，或者是对象</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl1096831 width=22 style='height:30.0pt;border-top:none;
+  width:16pt'>47</td>
+  <td class=xl696831 width=36 style='border-top:none;border-left:none;
+  width:27pt'>　</td>
+  <td class=xl696831 width=206 style='border-top:none;border-left:none;
+  width:155pt'>　</td>
+  <td class=xl696831 width=247 style='border-top:none;border-left:none;
+  width:185pt'>　</td>
+  <td class=xl726831 width=171 style='border-top:none;border-left:none;
+  width:128pt'>　</td>
+  <td class=xl1106831 width=328 style='border-top:none;width:246pt'>window.getComputedStyle(元素对象)</td>
+  <td class=xl696831 width=241 style='border-top:none;border-left:none;
+  width:181pt'>获取DOM节点样式</td>
+  <td class=xl1116831 width=186 style='border-top:none;border-left:none;
+  width:139pt'>　</td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl656831 style='height:30.0pt'>48</td>
+  <td class=xl636831></td>
+  <td class=xl636831></td>
+  <td class=xl636831></td>
+  <td class=xl646831 width=171 style='width:128pt'></td>
+  <td class=xl636831></td>
+  <td class=xl636831></td>
+  <td class=xl646831 width=186 style='width:139pt'></td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl656831 style='height:30.0pt'>49</td>
+  <td class=xl636831></td>
+  <td class=xl636831></td>
+  <td class=xl636831></td>
+  <td class=xl646831 width=171 style='width:128pt'></td>
+  <td class=xl636831></td>
+  <td class=xl636831></td>
+  <td class=xl646831 width=186 style='width:139pt'></td>
+ </tr>
+ <tr height=40 style='mso-height-source:userset;height:30.0pt'>
+  <td height=40 class=xl656831 style='height:30.0pt'>50</td>
+  <td class=xl636831></td>
+  <td class=xl636831></td>
+  <td class=xl636831></td>
+  <td class=xl646831 width=171 style='width:128pt'></td>
+  <td class=xl636831></td>
+  <td class=xl636831></td>
+  <td class=xl646831 width=186 style='width:139pt'></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=22 style='width:16pt'></td>
+  <td width=36 style='width:27pt'></td>
+  <td width=206 style='width:155pt'></td>
+  <td width=247 style='width:185pt'></td>
+  <td width=171 style='width:128pt'></td>
+  <td width=328 style='width:246pt'></td>
+  <td width=241 style='width:181pt'></td>
+  <td width=186 style='width:139pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</div>
+
+
+<!----------------------------->
+<!--“从 EXCEL 发布网页”向导结束-->
+<!----------------------------->
+</body>
+
+</html>

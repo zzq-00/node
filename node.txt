@@ -1,0 +1,109 @@
+1.浏览器端
+ECMAScript：js语法，for循环，if else var...
+DOM：约定了操作DOM元素的语法【dom.style.width dom.onclick dom.appendChild.....】
+BOM：操作浏览器的语法【window.alert setTimeout location.hrfe...】
+
+2.服务端【没有浏览器】
+ECMAScript：js语法，for循环，if else var
+学习了bom语法中的一些常用api【定时器 console ...】
+模块：内置模块(自带的)，第三方模块(别人写的，下载使用)
+
+3. Node.js  
+     1. 使用 -REPL(read eval print loop 读取 解析 打印 循环)
+     2. 写好01.js代码--在当前文件夹下---右击打开git bush或VScode终端中 --输入node 01.js
+
+4. ES6-基本概念(ECAMScript 2015)
+    1. ES6-let
+         a. 没有提升变量
+         b. 块级作用域，不能访问
+         c. 不能重复赋值
+     2.  const  常亮名 = xxx
+         a. const name ='张三'
+     3. 对象属性简化(解构)
+	let person={
+   	   name='a';
+   	   age=22;
+  	   sex=女;
+	}
+	let  {name,age,sex} =person
+      4. 模板字符串 ` `
+           可换行，可识别标签，表达式${}
+
+
+      5. es6--对象展开
+           { ...对象 }
+      6. 数组展开
+           [ ...数组 ]
+         数组不会有覆盖问题，依次按索引展开
+       7. 箭头函数----用在匿名函数上【普通哈数 function fn(){} 不能用】
+             省略 function 变为==>
+             如果形参 只有一个，可以省略小括号
+             如果函数体只有一行，可以省略大括号【同时省略return】
+       8. 箭头函数this
+             箭头函数的this在创建时就确定了，是上下文（和他平级的环境中）中的this
+             普通函数的this指向调用者
+             转换this，箭头函数 网站Babel
+       9. 路径 cd
+                cd ../  返回上一级 
+	__dirname:  js文件的所在文件夹的绝对路径
+	__filename : js文件的绝对路径
+
+a. __dirname:js文件的所在文件的绝对路径
+b. __filename:js文件夹所在的绝对路径
+
+10. 内置模块 
+       1. fs
+            导入内助模块
+           const fs = require('fs');
+	fs.readFile('地址'，'utf-8'，(err,data)=>{ if(err==null){console.log('成功')} } )
+	fs.writeFile('地址'，'utf-8'，(err,data)=>{ if(err==null){console.log('成功')} })
+        2. path
+           const path =require('path');
+	1. 获取扩展名
+	path.extname('01.html');  //.html
+	2. 获取文件名路径
+	path.dirname('文件1/01.html'); //返回当前文件夹的文件
+	3. 拼接地址，字符串形式用逗号隔开
+	path.join('文件1','01.html')；
+        3. http
+	const http = require('http');
+	1. 创建服务器对象
+	http.createServer(function(request,response){ 
+		// 1.解决中文乱码【text/plain:普通文本 text/html:html文本】
+    		response.setHeader('content-type','text/plain;charset=utf-8');
+    		// 2.获取地址中的信息
+    		//decodeUrI url中文解码
+    		console.log(decodeURI(request.url));
+		//3.返回内容【在浏览器显示的内容】
+		response.end('hello') ；
+		//4. 请求方式
+		requset.method
+	})；
+	2.  开启服务器 开启监听
+	    a. 参数1：端口号【物理端口，虚拟端口】
+	    b. 参数2：监听地址，省略则为本机
+	    c. 参数3：回调函数
+	server.listen(端口号,'监听地址,省略为本机'，function(err){
+		if(err==null){
+		console.log('开启成功')；
+	}) 
+	
+	3. 访问服务器 http://地址：端口号/
+
+第三方模块：express 是node.js 中的一种 web开发工具
+安装express 
+初始化 nmp init -y
+
+
+注册路由 
+get 方式  request.query.name
+post 方式 ---下载中间件--导入 request.body.name
+
+获取随机笑话数
+用户名验证
+上传图片
+
+
+	
+
+

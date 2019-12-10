@@ -1,0 +1,185 @@
+http://caniuse.com
+
+html:5  (页面类型)ctrl+E/Tab 补全代码
+html:xt   ctrl+E/Tab 补全代码
+文档类型声明三种级别：严格Strict型，过度Transitional类型，框架Frameset类型
+注释：ctrl+shift+/ 块注释 ctrl+/ 行注释
+空格合并 字符实体: &nbsp;
+大于号：&gt;  小于号：&lt;  引号：&quot;   圈c：&copy;
+css页面中属性{属性:属性值1;属性:属性值2;}
+/*id选择器
+  #nav{}*/
+/*类class选择器
+ .pic{}*/
+/*交集选择器
+ p.a{color:red;}类名为a的p标签
+ p .a{color: blue}p标签下的类a*/
+/*后代选择器 空格
+ div ul{}*/
+/*并集选择器 逗号
+ h3,.a,.b,#c{color: red}*/
+
+字体样式：
+{font-style:风格normal/italic/oblique;
+font-weight:bold; font-size:16px; 
+font-family:"Times New Roman" "字体";
+line-height: 20px; 
+text-align文字对齐:left/center/right/justity;
+text-indent:首行缩进2em;
+text-decoration下划线:none/line-through/underline/overline;
+vertical-align图垂直居中:middle；
+text-shadow文字阴影: 2px 2px 2px #000 左右 下上 模糊半径 颜色;
+letter-spacing字间距: 3px；word-spacing单词间距: 3px;}
+
+超链接伪类：
+a:link/*未访问状态*/{color:#000;text-decoration: none;}
+a:visited/*已访问状态*/{color: blue;}
+a:hover/*悬浮状态*/{color: red;}
+a:active/*点击状态*/{color:pink; }
+
+列表样式：li
+{list-style-type: none/circle/disc/declmal;
+list-style-position: outside/inside; 
+list-style-image: url(image/arrow-icno.gif);
+list-style:类型 
+}
+
+背景：div{
+background-color: pink;
+background-repeat: no-repeat/repeat/repeat-x/repeat-y;
+background-position 位置定位: 水平方向px 垂直方向px;
+background-image: url(iamge/tupian.jpg);
+background-size: /auto默认/cover平铺/contain;
+background:颜色 图片 定位 重复;}
+background-color线性渐变:-webkit-linear-gradient(to top,orange,blue);谷歌浏览器
+background-color:-moz-linear-gradient(to top,orange,blue);火狐
+
+background:rgba(255,255,255,0.5）白色为255.255.255，透明度;黑色0，0，0，0.5
+opacity：0-1（透明度）；
+filter：alpha(opacity=50);1-100透明度
+
+
+
+盒子模型
+div{
+box-sizing内宽高:border-box; 
+border-radius圆角: 20px;
+border-radius: 20px 0  5px 30px;
+border-radius圆: 50%;
+border-radius半圆: 50px 50px 0 0;
+box-shadow阴影: outset默认/inset 30px水平位置 20px垂直位置 10px模糊程度 #000颜色;
+
+}
+
+块级/行内元素
+
+{display:block块/inline行/inline-block行内块/none隐藏}
+visibility:hidden隐藏但位置保留
+
+溢出属性
+{overflow:visible默认/hidden溢出内容消失/scroll生成滚动条/auto滚动条 }
+
+清除浮动
+div:before{content: "1";}
+   	div:after{content: "1";}
+   	.nav:after{content: ".";
+		display:block;
+		clear:both;
+		height: 0;
+		visibility: hidden;
+   		}
+   	.nav{*zoom:1;}
+
+
+position：
+相对定位relative：相对自身定位，从标准文档流中不脱离
+绝对定位absolute：以body定位， 从标准文档流中脱离，子绝父相（父使用定位元素，子以父绝对定位）
+固定定位fixed：以浏览器窗口定位
+
+位置定位（上，下）
+z-index：默认值0
+
+
+鼠标形状 cursor: default/pointer/;
+<html 属性1="属性值1" 属性2="属性值2">
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+导入式css：@import:url(css/style.css)
+<head>
+<meta charset="UTF-8">页面属性
+<title>Document</title>网页标题
+</head>
+<body>网页内容
+图片链接:<img src="图片链接"〉
+超链接:<a href="路径../hetao.jgp" target="_blank/_selt">超链接</a>
+锚链接：同页面内跳转<a href="#log">用户登录帮助</a>-----<a id="log">登录</a>
+        页面间跳转<a href="lianjieye.html/#log">用户登录帮助</a>-----<a id="log">登录</a>
+字体设置：
+    <h1>字号大小</h1>
+    <p>段落</p>
+    <br〉换行
+    <strong>文字加粗</strong>
+    <em>文字倾斜</em>
+    <hr>水平线
+列表：(块元素）
+    <tr>列<td>行<ul>无需列表</ul> <ol>有序列表</ol></td></tr>
+    <dl><dt>水果<dd>苹果</dd></dt></dl>(定义列表分类）
+    <dl><dt>蔬菜<dd>土豆</dd></dt></dl>
+
+
+表单：
+<form action="链接页" method="post">
+       <filedset>域标签</filedset>
+       <legend>域标题</legend>
+常用控件
+文本框：<input type="text" name="" value="" maxlength="最长字符数" size="大小" placeholder="请输入6-12位字母和数字" required="内容不能为空" pattern="">
+单选按钮：<input type="radio" name="" value="女" >
+复选框：<input type="checkbox" name="" value="爱好" >
+邮箱：<input type="email" name="email" placeholder="" required="内容不能为空">
+url:<input type="url" name="" placeholder="" accesskey="">
+数字：<input type="number" min="0" max="100" step="10"placeholder="" autofocus="自动获得焦点">
+搜索：<input type="search" name="s" placeholder=">
+滑块：<input type="range" min="0" max="10" step="2" >
+电话：<input type="tel" name="电话"  pattern="^1[358]\d{9} 第一位是1 第二位为3或5或8 后九位">
+时间：<input type="time" name="t">
+日期：<input type="date" name="d">
+年月：<input type="month" name="m">
+ 周 ：<input type="week" name="w">
+注册：<input type="submit" name="" value="注册"
+重置：<input type="reset" name="" value="重置">
+按钮：<input type="button" name="userid" value="">
+隐藏：<input type="hidden" name="" value="">
+图片按钮：<input type="image"  src="" name="" value="">
+文件域：<input type="file" name="" value="">
+文本域：<textarea cols="字数" rows="行数"></textarea>
+下拉列表：<select><option value=""></option></select>
+</form>
+</body>
+</html〉
+表格：
+<table  width=""  border="1"cellspacing="10单元格间距属性" cellpadding="10 单元格内间距(填充)" align="center水平居中">
+  <tr rowspan="2 跨行 然删除别合并的单元格">
+     <td colspan="2 跨列 然删除别合并的单元格"></td>
+     <th>文字加粗</th>
+  </tr>
+</table>
+</body>
+
+框架页面:（修改文档声明类型Frameset）
+<frameset cols="200,*,200 纵向分割" border="5" bordercolor="red">
+	<frame name="left" src="左部分.html" />
+	<frame name="middle" src="中间.html" />
+	<frame name="right" src="右部分.html" />
+</frameset>
+<frameset rows="25%,*,25% 横向分割" border="5" bordercolor="red">
+	<frame name="left" src="上部分.html" />
+	<frame name="middle" src="middle.html" />
+	<frame name="right" src="下部分.html" />
+</frameset>
+
+视频：
+<video width="" height="" loop="3"循环次数 controls //autoplay自动播放 >
+	<source src="video.webm"  type="">
+	<source src="video.mp4"  type="">
+</video>
+
+音频：

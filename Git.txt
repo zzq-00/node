@@ -1,0 +1,100 @@
+版本管理软甲的类别
+     集中式 ：SVN
+     分布式 ： Git
+使用Git记录版本的步骤
+  1. 初次使用Git  
+         在项目代码文件夹的空白位置，右击
+         在弹出运行框中，执行 git init ，初始化（表示当前项目使用git管理l）
+         执行完命令之后，会产生一个隐藏文件 .git
+   2. 如何纪律写好的代码
+         执行 git add .  
+         执行 git commit -m  ' 此次记录的说明，类似与注释 '
+
+必须在当前文件夹 右击 打开Git 进行操作
+
+git init 
+git add . 【git add 2.txt 3.txt】
+git commit -m  ' 注释内容'  【git commit 文件夹名 -m  ' 注释内容'】
+git commit -a -m  ' 注释内容'  【曾经被git管理过的，所以可以直接从工作区提交到本地创库】  
+git log --oneline 【查找代码版本】
+git checkout .【切换】
+git reset .  【从本地创库-->缓存区】
+git reset --hard 【即恢复缓存区，又恢复到工作区】
+git checkout master 【切回到原来的2】
+初次提交代码的提示
+git config --globall user.name ' xxx '
+git config --globall user.email ' xxx '
+git log 【历史记录】
+git log --oneline到当前
+查看状态 git status
+
+开发：development
+
+
+添加和提交代码
+    工作区-->暂存区  git add .
+    工作区-->仓库  git commit -a -m 【文件曾经被git管理过】
+    暂存区-->仓库 git commit -m '说明'
+恢复代码
+    暂存区 --> 工作区 git checkout . 
+    仓库 ---> 暂存区 get reset .
+    仓库---> 工作区和暂存区 get reset --hard 
+文件状态
+   查看 ：git status
+在历史中穿梭
+   查看 git log
+查到某个版本号
+   git checkout 版本号
+   git checkout master 
+
+创建分支
+   git branch dev
+
+切换分支
+    git checkout dev 【切换到dev分支】
+创建并直接切换分支
+    git checkout -b
+合并分支
+     git merge  dev
+删除分支【并不能在自己分支上删自己】
+     git branch -d dev
+查看所有分支
+     git branch
+
+推送本地仓库文件--> 远程仓库
+  建立关系
+      git remote add 远程仓库地址别名 远程仓库地址 【此时还没推送】
+ 首次推送
+       git push -u 远程仓库地址别名  本地分支：远程分支
+       如果本地分支和远程分支名一样，则可以省略：远程分支
+       git rebase
+  以后每次推送
+      git push
+ 注意事项 
+     首次推送会弹出一个矿口，让填写Github的账号和密码【凭据管理器】
+
+仓库拥有者
+   邀请合作者
+   再次比那些代码，仍然要 先拉后推 
+
+多人合作
+  克隆远程仓库到本地
+       git clone 远程仓库地址 【将远程文件拷贝到本地】
+  把新写的代码--->提交到本地仓库    
+  先拉取代码
+       git pull
+   再推送代码到远程仓库
+       git push
+
+如果要删除之前的
+git reset --hard 版本号
+从新提交 git add . git commit -m '注释'
+
+    
+
+电脑本地 自己的用户下 有.gitconfig 文件 可以看配置过的信息
+
+工作区 ---------git add . ------>暂存区------git commit -m --------->本地创库
+工作区：代码文件夹代表工作区，新创建的文件
+暂存区：执行git add . 之后 ，新创建的文件，算是被Git管理了【没有形成历史记录】
+本地创库：执行git commit -m  之后 ，形成了历史记录【一个版本】
